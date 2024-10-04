@@ -2,7 +2,8 @@
 
 ## Courses
   ### With certification 
-  - https://www.freecodecamp.org/learn/
+  - [Freecodecamp](https://www.freecodecamp.org/learn/)![certification](https://img.shields.io/badge/certification-blue) 
+  - [The Odin project](https://www.theodinproject.com/)![career paths](https://img.shields.io/badge/career--paths-purple)  
 
   ### Without
 - https://openclassrooms.com/ 
