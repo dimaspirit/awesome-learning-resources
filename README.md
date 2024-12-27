@@ -1,13 +1,11 @@
 # awesome-learning-paths
 
 ## Courses
-  ### With certification 
   - [Freecodecamp](https://www.freecodecamp.org/learn/)![certification](https://img.shields.io/badge/certification-blue) 
   - [The Odin project](https://www.theodinproject.com/)![career paths](https://img.shields.io/badge/career--paths-purple)  
 
   ### Without
 - https://openclassrooms.com/ 
-- https://www.freecodecamp.org/learn 
 - https://skillsforall.com/
 - https://learn.microsoft.com/en-us/
 - https://skillsbuild.org/ by IBM
