@@ -2,7 +2,8 @@
 
 ## Courses
   - [Freecodecamp](https://www.freecodecamp.org/learn/)![certification](https://img.shields.io/badge/certification-blue) 
-  - [The Odin project](https://www.theodinproject.com/)![career paths](https://img.shields.io/badge/career--paths-purple)  
+  - [The Odin project](https://www.theodinproject.com/)![career paths](https://img.shields.io/badge/career--paths-purple)
+  - [FullStackOpen by University of Helsinki](https://fullstackopen.com/en/)![career paths](https://img.shields.io/badge/career--paths-purple)
 
   ### Without
 - https://openclassrooms.com/ 
