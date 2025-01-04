@@ -1,12 +1,12 @@
-# awesome-learning-paths
+# Awesome learning resources
 
   ### [freeCodeCamp](https://www.freecodecamp.org/learn/)
 
   ![type](http://img.shields.io/badge/type-Courses-blue)
   ![certification](https://img.shields.io/badge/certification-Certificate_Provided-purple)
-  ![language](https://img.shields.io/badge/languages-English-white)
+  ![language](https://img.shields.io/badge/languages-English-yellow)
   ![level](https://img.shields.io/badge/level-All_levels-orange)
-  ![price](https://img.shields.io/badge/price-Free-yellow)
+  ![price](https://img.shields.io/badge/price-Free-green)
 
   Topics:
   - Front-end development
