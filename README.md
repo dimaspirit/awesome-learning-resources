@@ -25,3 +25,19 @@
 
   Topics:
    - FullStack development (JavaScript)
+
+  ### [Prometheus](https://prometheus.org.ua/courses-catalog?price=0)
+  ![type](http://img.shields.io/badge/type-Course-blue)
+  ![certification](https://img.shields.io/badge/certification-Certificate_Provided-purple)
+  ![language](https://img.shields.io/badge/languages-Ukrainian-yellow)
+  ![level](https://img.shields.io/badge/level-Beginner-red)
+  ![price](https://img.shields.io/badge/price-Fremium-green)
+
+  Topics:
+  - CS50 by Harvard University (translations)
+  - Linux
+  - Git
+  - HTML, CSS, JavaScript
+  - Python
+  - Java
+  - QA
