@@ -1,4 +1,3 @@
-@ -1,53 +1,36 @@
 # Awesome learning resources
 
 ### [freeCodeCamp](https://www.freecodecamp.org/learn/)

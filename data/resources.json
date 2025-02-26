@@ -1,0 +1,10 @@
+[
+  {
+    "type": "courses",
+    "certification": ["certification"],
+    "title": "freeCodeCamp",
+    "languages": ["English"],
+    "level": "All levels",
+    "price": "Free"
+  }
+]
