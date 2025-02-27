@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --links: #0070f3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: var(--links);
 }
 
 @media (prefers-color-scheme: dark) {
