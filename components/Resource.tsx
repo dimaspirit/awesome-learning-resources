@@ -1,7 +1,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -10,30 +9,35 @@ import { Button } from "@/components/ui/button"
 import { SquareArrowOutUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
+import { languages } from "@/data/tags"
+
 interface IResources {
   title: string;
   link: string;
-  type: string;
-  certification: string[];
   languages: string[];
-  level: string;
-  price: string;
 }
 
 const Resource = ({ resource }: {resource: IResources}) => {
+  const languagesFormatted = resource.languages.map((lang) => languages[lang]);
+
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-3xl">{resource.title}</CardTitle>
-        <CardDescription>Card Description</CardDescription>
       </CardHeader>
 
       <CardContent>
-        <Badge variant="outline" className="m-1">type: {resource.type}</Badge>
-        <Badge variant="outline" className="m-1">Certification: {resource.certification.join(', ')}</Badge>
-        <Badge variant="outline" className="m-1">Level: {resource.level}</Badge>
-        <Badge variant="outline" className="m-1">Price: {resource.price}</Badge>
-        <Badge variant="outline" className="m-1">Languages: {resource.languages.join(', ')}</Badge>
+        <p>
+          <small className="text-xs font-medium uppercase text-gray-500">
+            languages
+          </small>
+        </p>
+        {languagesFormatted.map((lang, id) => (
+          <Badge key={`${lang}-${id}`} variant="outline" className="m-1 text-sm tracking-wide">
+            {lang.nativeName}
+          </Badge>
+        ))}
+        {/* <Badge variant="outline" className="m-1">Languages: {formatLanguages(resource.languages).join(', ')}</Badge> */}
       </CardContent>
 
       <CardFooter>

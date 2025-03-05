@@ -4,7 +4,7 @@ import "./globals.css";
 
 const ralewayFont = Raleway({
   variable: "--font-raleway-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ralewayFont.variable}`}>
+      <body className={`${ralewayFont.variable} font-(family-name:--font-raleway-sans) antialiased`}>
         {children}
       </body>
     </html>
