@@ -1,54 +1,65 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { SquareArrowOutUpRight } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import { IResource } from '@/types/resource';
+import { languages, types } from '@/data';
+import { Card, Heading, Button, Badge, Flex, Stack, Box } from "@chakra-ui/react"
 
-import { languages } from "@/data/tags"
+const Resource = ({ resource }: { resource: IResource }) => {
+  const languagesList = resource.languages.map((language) => languages[language].nativeName);
+  const typesList = resource.types.map((type) => types[type].name);
 
-interface IResources {
-  title: string;
-  link: string;
-  languages: string[];
-}
 
-const Resource = ({ resource }: {resource: IResources}) => {
-  const languagesFormatted = resource.languages.map((lang) => languages[lang]);
+  // const typesList = resource.types.map((type) => {
+  //   if(types[type]) {
+  //     const currentType = {...types[type]}
+  //     return currentType
+  //   }
+  // });
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-3xl">{resource.title}</CardTitle>
-      </CardHeader>
+    <Card.Root key={resource.link}>
+      <Card.Header>
+        <Heading size="4xl">{resource.title}</Heading>
+      </Card.Header>
 
-      <CardContent>
-        <p>
-          <small className="text-xs font-medium uppercase text-gray-500">
-            languages
-          </small>
-        </p>
-        {languagesFormatted.map((lang, id) => (
-          <Badge key={`${lang}-${id}`} variant="outline" className="m-1 text-sm tracking-wide">
-            {lang.nativeName}
-          </Badge>
-        ))}
-        {/* <Badge variant="outline" className="m-1">Languages: {formatLanguages(resource.languages).join(', ')}</Badge> */}
-      </CardContent>
+      <Card.Body>
+        <Stack>
+          <Box>
+            <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
+              types
+            </Heading>
+            
+            <Flex wrap="wrap" gap="1">
+              {typesList.map((type) => (
+                <Badge key={type} variant={'surface'} size="md" fontWeight={"normal"}>{type}</Badge>
+              ))}
+            </Flex>
+          </Box>
 
-      <CardFooter>
+          <Box>
+            <Heading size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
+              languages
+            </Heading>
+            
+            <Flex wrap="wrap" gap="1">
+              {languagesList.map((language) => (
+                <Badge key={language} variant={'surface'} size="md" fontWeight={"normal"}>{language}</Badge>
+              ))}
+            </Flex>
+          </Box>
+        </Stack>
+      </Card.Body>
+
+      <Card.Footer>
         <Button asChild>
-          <a href={resource.link} target="_blank" rel="noopener noreferrer">
-            <SquareArrowOutUpRight /> Visit resource
+          <a
+            href={resource.link}
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Resource
           </a>
         </Button>
-      </CardFooter>
-    </Card>
-  );
-}
+      </Card.Footer>
+    </Card.Root>
+  )
+};
 
 export default Resource;

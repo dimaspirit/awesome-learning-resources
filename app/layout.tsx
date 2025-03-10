@@ -1,15 +1,10 @@
-import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 import "./globals.css";
-
-const ralewayFont = Raleway({
-  variable: "--font-raleway-sans",
-  subsets: ["latin", "cyrillic"],
-});
+import type { Metadata } from "next";
+import { Provider } from "@/components/ui/provider";
 
 export const metadata: Metadata = {
-  title: "Awesome learning resources",
-  description: "A curated list of awesome resources to help you learn, build your career, and land your dream job in tech, from coding basics to advanced topics.",
+  title: "Awesome Learning Resources",
+  description: "A curated collection of resources designed to support learning and career growth, covering everything from coding fundamentals to advanced topics",
 };
 
 export default function RootLayout({
@@ -18,9 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ralewayFont.variable} font-(family-name:--font-raleway-sans) antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Provider>
+          {children}
+        </Provider>
       </body>
     </html>
   );

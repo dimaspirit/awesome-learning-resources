@@ -1,4 +1,5 @@
-import languages from "./languages"
+import languages from "./languages";
+import types from './types';
 
 const tags = {
   languages: {
@@ -6,17 +7,16 @@ const tags = {
     description: "The languages the resource is available in",
     list: languages,
   },
-  // subjects: {},
-  // topics: {},
-  // format: {},
-  // level: {},
-  // duration: {},
-  // price: {},
-  // educator: {}
+  types: {
+    name: "Types",
+    description: "Defines the structure and delivery format of a learning resource.",
+    list: types,
+  }
 }
 
 export {
   languages,
+  types,
 }
 
 export default tags;
