@@ -1,18 +1,11 @@
 import { IResource } from '@/types/resource';
-import { languages, types } from '@/data';
+import { languages, types, PRICES } from '@/data';
 import { Card, Heading, Button, Badge, Flex, Stack, Box } from "@chakra-ui/react"
 
 const Resource = ({ resource }: { resource: IResource }) => {
   const languagesList = resource.languages.map((language) => languages[language].nativeName);
   const typesList = resource.types.map((type) => types[type].name);
-
-
-  // const typesList = resource.types.map((type) => {
-  //   if(types[type]) {
-  //     const currentType = {...types[type]}
-  //     return currentType
-  //   }
-  // });
+  const price = PRICES[resource.price].name;
 
   return (
     <Card.Root key={resource.link}>
@@ -21,7 +14,7 @@ const Resource = ({ resource }: { resource: IResource }) => {
       </Card.Header>
 
       <Card.Body>
-        <Stack>
+        <Stack gap={"4"}>
           <Box>
             <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
               types
@@ -32,6 +25,16 @@ const Resource = ({ resource }: { resource: IResource }) => {
                 <Badge key={type} variant={'surface'} size="md" fontWeight={"normal"}>{type}</Badge>
               ))}
             </Flex>
+          </Box>
+
+          <Box>
+            <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
+              price
+            </Heading>
+            
+            <Box gap="1">
+                <Badge variant={'surface'} size="md" fontWeight={"normal"}>{price}</Badge>
+            </Box>
           </Box>
 
           <Box>

@@ -13,7 +13,7 @@ export default function Home() {
         </Box>
 
         <Container maxW={'2xl'} padding={10}>
-          <Stack direction={'column'} gap="10">
+          <Stack direction={'column'} gap="4">
             {resources.map((resource) => (
               <Resource key={resource.link} resource={resource} />
             ))}
