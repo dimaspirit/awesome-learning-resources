@@ -5,7 +5,7 @@ import { Card, Heading, Button, Badge, Flex, Stack, Box } from "@chakra-ui/react
 const Resource = ({ resource }: { resource: IResource }) => {
   const languagesList = resource.languages.map((language) => languages[language].nativeName);
   const typesList = resource.types.map((type) => types[type].name);
-  const price = PRICES[resource.price].name;
+  const price = PRICES[resource.price].label;
 
   return (
     <Card.Root key={resource.link}>

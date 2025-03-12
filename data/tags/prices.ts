@@ -1,27 +1,27 @@
 export type PriceCode = 'free' | 'freemium' | 'paid';
 
-interface IPrice {
-  code: PriceCode;
-  name: string;
+export interface IPrice {
+  value: PriceCode;
+  label: string;
   description: string;
 }
 
-type prices = Record<IPrice['code'], IPrice>;
+type prices = Record<IPrice['value'], IPrice>;
 
 const PRICES: prices = {
   free: {
-    code: 'free',
-    name: 'Free',
+    value: 'free',
+    label: 'Free',
     description: 'Fully accessible at no cost, no payments required'
   },
   freemium: {
-    code: 'freemium',
-    name: 'Freemium',
+    value: 'freemium',
+    label: 'Freemium',
     description: 'Free access with optional paid features or upgrades'
   },
   paid: {
-    code: 'paid',
-    name: 'Paid',
+    value: 'paid',
+    label: 'Paid',
     description: 'Requires payment to access content or features'
   }
 }
