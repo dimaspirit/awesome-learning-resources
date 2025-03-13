@@ -12,12 +12,12 @@ const types: ITypes = {
   course: {
     code: 'course',
     name: "Course",
-    description: "",
+    description: "A standalone learning program focused on a specific topic.",
   },
   path: {
     code: 'path',
     name: "Path",
-    description: "",
+    description: "A guided sequence of courses for deeper learning.",
   }
 }
 
