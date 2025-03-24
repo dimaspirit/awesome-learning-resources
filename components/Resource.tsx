@@ -1,11 +1,11 @@
-import { IResource } from '@/types/resource';
-import { languages, types, PRICES } from '@/data';
-import { Card, Heading, Button, Badge, Flex, Stack, Box } from "@chakra-ui/react"
+import { IResource } from "@/data/resources";
+// import { languages, types, PRICES } from '@/data';
+import { Card, Heading, Button, Stack, Box } from "@chakra-ui/react"
 
 const Resource = ({ resource }: { resource: IResource }) => {
-  const languagesList = resource.languages.map((language) => languages[language].nativeName);
-  const typesList = resource.types.map((type) => types[type].name);
-  const price = PRICES[resource.price].label;
+  // const languagesList = resource.languages.map((language) => languages[language].nativeName);
+  // const typesList = resource.types.map((type) => types[type].name);
+  // const price = PRICES[resource.price].label;
 
   return (
     <Card.Root key={resource.link}>
@@ -20,11 +20,11 @@ const Resource = ({ resource }: { resource: IResource }) => {
               types
             </Heading>
             
-            <Flex wrap="wrap" gap="1">
+            {/* <Flex wrap="wrap" gap="1">
               {typesList.map((type) => (
                 <Badge key={type} variant={'surface'} size="md" fontWeight={"normal"}>{type}</Badge>
               ))}
-            </Flex>
+            </Flex> */}
           </Box>
 
           <Box>
@@ -32,9 +32,9 @@ const Resource = ({ resource }: { resource: IResource }) => {
               price
             </Heading>
             
-            <Box gap="1">
+            {/* <Box gap="1">
                 <Badge variant={'surface'} size="md" fontWeight={"normal"}>{price}</Badge>
-            </Box>
+            </Box> */}
           </Box>
 
           <Box>
@@ -42,11 +42,11 @@ const Resource = ({ resource }: { resource: IResource }) => {
               languages
             </Heading>
             
-            <Flex wrap="wrap" gap="1">
+            {/* <Flex wrap="wrap" gap="1">
               {languagesList.map((language) => (
                 <Badge key={language} variant={'surface'} size="md" fontWeight={"normal"}>{language}</Badge>
               ))}
-            </Flex>
+            </Flex> */}
           </Box>
         </Stack>
       </Card.Body>

@@ -1,24 +1,8 @@
-export type TypeCodes = 'course' | 'path';
+import { LanguageValue } from "./languages";
 
-interface IType {
-  code: TypeCodes;
-  name: string;
+export type TagsValues = LanguageValue;
+
+export default interface ITag {
+  label: string;
   description: string;
 }
-
-type ITypes = Record<IType['code'], IType>;
-
-const types: ITypes = {
-  course: {
-    code: 'course',
-    name: "Course",
-    description: "A standalone learning program focused on a specific topic.",
-  },
-  path: {
-    code: 'path',
-    name: "Path",
-    description: "A guided sequence of courses for deeper learning.",
-  }
-}
-
-export default types;

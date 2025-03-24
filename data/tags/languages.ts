@@ -1,62 +1,75 @@
-interface ILanguage {
-  code: string;
-  name: string;
+import ITag from './types';
+
+export type LanguageValue = 
+  | 'en'
+  | 'uk'
+  | 'fi'
+  | 'es'
+  | 'it'
+  | 'pt'
+  | 'de'
+  | 'fr'
+  | 'sw'
+  | 'zh';
+
+interface ILanguage extends Omit<ITag, 'description'>  {
+  value: LanguageValue;
   nativeName: string;
 }
 
-type ILanguages = Record<ILanguage['code'], ILanguage>;
+export type Languages = Record<ILanguage['value'], ILanguage>;
 
-const languages: ILanguages = {
+const LANGUAGES: Languages = {
   en: {
-    code: "en",
-    name: "English",
+    value: "en",
+    label: "English",
     nativeName: "English",
   },
   uk: {
-    code: "uk",
-    name: "Ukrainian",
+    value: "uk",
+    label: "Ukrainian",
     nativeName: "Українська",
   },
   fi: {
-    code: "fi",
-    name: "Finnish",
+    value: "fi",
+    label: "Finnish",
     nativeName: "Suomi",
   },
   es: {
-    code: "es",
-    name: "Spanish",
+    value: "es",
+    label: "Spanish",
     nativeName: "Español",
   },
   it: {
-    code: "it",
-    name: "Italian",
+    value: "it",
+    label: "Italian",
     nativeName: "Italiano",
   },
   pt: {
-    code: "pt",
-    name: "Portuguese",
+    value: "pt",
+    label: "Portuguese",
     nativeName: "Português",
   },
   de: {
-    code: "de",
-    name: "German",
+    value: "de",
+    label: "German",
     nativeName: "Deutsch",
   },
   fr: {
-    code: "fr",
-    name: "French",
+    value: "fr",
+    label: "French",
     nativeName: "Français",
   },
   sw: {
-    code: "sw",
-    name: "Swahili",
+    value: "sw",
+    label: "Swahili",
     nativeName: "Kiswahili",
   },
   zh: {
-    code: "zh",
-    name: "Chinese",
+    value: "zh",
+    label: "Chinese",
     nativeName: "中文",
   }
 };
 
-export default languages;
+export default LANGUAGES;
