@@ -1,9 +1,9 @@
-import LANGUAGES, { Languages } from './languages';
-import CATEGORIES, { Categories } from './category';
-import TYPES, { Types } from './type';
-import PRICES, { Prices } from './prices';
+import LANGUAGES, { ILanguage } from './language';
+import CATEGORIES, { ICategory } from './category';
+import TYPES, { IType } from './type';
+import PRICES, { IPrice } from './price';
 
-type TagList = Languages | Categories | Types | Prices;
+type TagList = IPrice[] | ILanguage[] | ICategory[] | IType[];
 
 export type TagValues = 'language' | 'type' | 'price' | 'category';
 

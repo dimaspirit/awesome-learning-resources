@@ -1,32 +1,31 @@
 import ITag from './types';
 
-type PriceValue = 
+export type PriceValue = 
   | 'free'
   | 'freemium'
   | 'paid';
 
-interface Price extends ITag {
+export interface IPrice extends ITag {
   value: PriceValue;
 }
 
-export type Prices = Record<Price['value'], Price>;
-
-const PRICES: Prices = {
-  free: {
+const PRICES: IPrice[] = [
+  {
     value: 'free',
     label: 'Free',
     description: 'Fully accessible at no cost, no payments required'
   },
-  freemium: {
+  {
     value: 'freemium',
     label: 'Freemium',
     description: 'Free access with optional paid features or upgrades'
   },
-  paid: {
+  {
     value: 'paid',
     label: 'Paid',
     description: 'Requires payment to access content or features'
-  }
-}
+  },
+]
+
 
 export default PRICES;

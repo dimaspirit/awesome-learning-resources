@@ -1,22 +1,19 @@
-
-// import { TypeCodes } from "@/data/tags/";
-// import { PriceCode } from '@/data/tags/prices';
-// import { Category } from '@/data/tags/category';
-
-import { CategoryValue } from "./tags/category";
-import { LanguageValue } from "./tags/languages";
-
+import { CategoryValue } from "../tags/category";
+import { LanguageValue } from "../tags/language";
+import { PriceValue } from "../tags/price";
 
 export interface IResource {
   link: string;
   title: string;
-  language: LanguageValue[];
-  category: CategoryValue[],
+
+  price: PriceValue;
+
   types: string[];
-  price: string;
+  language: LanguageValue[];
+  category: CategoryValue[];
 }
 
-const resources:IResource[] = [
+const RESOURCES:IResource[] = [
   {
     "link": "https://www.freecodecamp.org/learn/",
     "title": "freeCodeCamp",
@@ -51,4 +48,4 @@ const resources:IResource[] = [
   }
 ]
 
-export default resources;
+export default RESOURCES;

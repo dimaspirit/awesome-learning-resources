@@ -1,16 +1,24 @@
+import TAGS from "@/data/tags";
 import { IResource } from "@/data/resources";
-// import { languages, types, PRICES } from '@/data';
-import { Card, Heading, Button, Stack, Box } from "@chakra-ui/react"
+
+import { Card, Heading, Button, Stack, Box, Flex, Badge } from "@chakra-ui/react";
 
 const Resource = ({ resource }: { resource: IResource }) => {
-  // const languagesList = resource.languages.map((language) => languages[language].nativeName);
-  // const typesList = resource.types.map((type) => types[type].name);
-  // const price = PRICES[resource.price].label;
+  const price = TAGS.price.list.find((p) => p.value === resource.price)?.label || resource.price;
+  const typesList = resource.types.map((type) => {
+    const typeTag = TAGS.type.list.find((t) => t.value === type);
+    return typeTag && 'label' in typeTag ? typeTag.label : type;
+  });
+
+  const languagesList = resource.language.map((lang) => {
+    const language = TAGS.language.list.find((l) => l.value === lang);
+    return language && 'nativeName' in language ? language.nativeName : lang;
+  });
 
   return (
     <Card.Root key={resource.link}>
       <Card.Header>
-        <Heading size="4xl">{resource.title}</Heading>
+        <Heading size="2xl">{resource.title}</Heading>
       </Card.Header>
 
       <Card.Body>
@@ -19,12 +27,12 @@ const Resource = ({ resource }: { resource: IResource }) => {
             <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
               types
             </Heading>
-            
-            {/* <Flex wrap="wrap" gap="1">
+
+            <Flex wrap="wrap" gap="1">
               {typesList.map((type) => (
                 <Badge key={type} variant={'surface'} size="md" fontWeight={"normal"}>{type}</Badge>
               ))}
-            </Flex> */}
+            </Flex>
           </Box>
 
           <Box>
@@ -32,21 +40,21 @@ const Resource = ({ resource }: { resource: IResource }) => {
               price
             </Heading>
             
-            {/* <Box gap="1">
-                <Badge variant={'surface'} size="md" fontWeight={"normal"}>{price}</Badge>
-            </Box> */}
+            <Box gap="1">
+              <Badge variant={'surface'} size="md" fontWeight={"normal"}>{price}</Badge>
+            </Box>
           </Box>
 
           <Box>
-            <Heading size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
+            <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
               languages
             </Heading>
-            
-            {/* <Flex wrap="wrap" gap="1">
-              {languagesList.map((language) => (
-                <Badge key={language} variant={'surface'} size="md" fontWeight={"normal"}>{language}</Badge>
+
+            <Flex wrap="wrap" gap="1">
+              {languagesList.map((lang) => (
+                <Badge key={lang} variant={'surface'} size="md" fontWeight={"normal"}>{lang}</Badge>
               ))}
-            </Flex> */}
+            </Flex>
           </Box>
         </Stack>
       </Card.Body>
