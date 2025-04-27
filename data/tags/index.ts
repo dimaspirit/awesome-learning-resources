@@ -1,11 +1,10 @@
-import LANGUAGES, { ILanguage } from './language';
-import CATEGORIES, { ICategory } from './category';
 import TYPES, { IType } from './type';
 import PRICES, { IPrice } from './price';
+import LANGUAGES, { ILanguage } from './language';
 
-type TagList = IPrice[] | ILanguage[] | ICategory[] | IType[];
+type TagList = IPrice[] | ILanguage[] | IType[];
 
-export type TagValues = 'language' | 'type' | 'price' | 'category';
+export type TagValues = 'language' | 'type' | 'price';
 
 export type Tag = {
   label: string;
@@ -35,12 +34,6 @@ const TAGS: Tags = {
     description: 'Indicates whether a resource is free, freemium, or requires payment.',
     list: PRICES,
   },
-  category: {
-    label: 'Category',
-    value: 'category',
-    description: 'Broad subjects a resource covers, defining its main area of focus.',
-    list: CATEGORIES,
-  }
 };
 
 export default TAGS;
