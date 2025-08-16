@@ -7,7 +7,8 @@
     "build": "next build",
     "serve": "npx serve@latest out",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:readme": "tsx scripts/generate-readme.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.11.0",
@@ -25,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }
