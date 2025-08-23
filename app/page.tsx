@@ -1,6 +1,6 @@
 'use client'
 
-import { Container, Flex, Stack, Link, Heading} from "@chakra-ui/react";
+import { Container, Flex, Stack, Link, Heading } from "@chakra-ui/react";
 
 import RESOURCES from "@/data/resources";
 
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Flex direction="column" minHeight="100vh">
       <Container flexGrow={0} padding={4} as="header">
-        <Heading as="h1" size="2xl" textAlign={'center'}>Awesome learning resource</Heading>
+        <Heading as="h1" size="4xl" textAlign={'center'}>Awesome learning resource</Heading>
       </Container>
 
       <Container maxW={'2xl'} padding={10} as="main">
