@@ -39,6 +39,13 @@ const RESOURCES:IResource[] = [
     "language": ["en"],
     "types": ["path"],
     "price": "free",
+  },
+  {
+    "link": "https://skillbuilder.aws/",
+    "title": "AWS Skill Builder",
+    "language": ["en"],
+    "types": ["course", "path"],
+    "price": "freemium",
   }
 ]
 

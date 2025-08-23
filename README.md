@@ -19,3 +19,8 @@
 
 ![price](https://img.shields.io/badge/price-Free-green) ![type](http://img.shields.io/badge/type-Path-blue) ![languages](https://img.shields.io/badge/languages-English-yellow)
 
+
+### [AWS Skill Builder](https://skillbuilder.aws/)
+
+![price](https://img.shields.io/badge/price-Freemium-green) ![type](http://img.shields.io/badge/type-Course%2C%20Path-blue) ![languages](https://img.shields.io/badge/languages-English-yellow)
+
