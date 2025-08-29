@@ -1,14 +1,12 @@
-import { LanguageValue } from "../tags/language";
-import { PriceValue } from "../tags/price";
+import { LanguageValue, PriceValue, TypeValue } from "../tags/types";
 
 export interface IResource {
   link: string;
   title: string;
-
   price: PriceValue;
-
-  types: string[];
+  types: TypeValue[];
   language: LanguageValue[];
+  description?: string;
 }
 
 const RESOURCES:IResource[] = [

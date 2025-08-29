@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import resources from "../data/resources";
-import LANGUAGES from "../data/tags/language";
+import { LANGUAGES } from "../data/tags/language";
 
 const languageMap = Object.fromEntries(
   LANGUAGES.map(lang => [lang.value, lang.label])

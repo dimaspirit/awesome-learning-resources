@@ -1,23 +1,4 @@
-import ITag from './types';
-
-export type LanguageValue = 
-  | 'en'
-  | 'uk'
-  | 'fi'
-  | 'es'
-  | 'it'
-  | 'pt'
-  | 'de'
-  | 'fr'
-  | 'sw'
-  | 'zh';
-
-export interface ILanguage extends Omit<ITag, 'description'>  {
-  value: LanguageValue;
-  nativeName: string;
-}
-
-const LANGUAGES: ILanguage[] = [
+const LANGUAGES = [
   {
     value: "en",
     label: "English",
@@ -68,6 +49,6 @@ const LANGUAGES: ILanguage[] = [
     label: "Chinese",
     nativeName: "中文",
   }
-];
+] as const;
 
-export default LANGUAGES;
+export { LANGUAGES };

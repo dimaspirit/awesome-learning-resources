@@ -1,18 +1,21 @@
-import TAGS from "@/data/tags";
+'use client';
+
+import { TAGS } from "@/data/tags";
 import { IResource } from "@/data/resources";
 
 import { Card, Heading, Button, Stack, Box, Flex, Badge } from "@chakra-ui/react";
 
 const Resource = ({ resource }: { resource: IResource }) => {
-  const price = TAGS.price.list.find((p) => p.value === resource.price)?.label || resource.price;
-  const typesList = resource.types.map((type) => {
+  // Ensure consistent rendering by using default values
+  const price = TAGS.price.list.find((p) => p.value === resource.price)?.label ?? resource.price ?? '';
+  const typesList = (resource.types || []).map((type) => {
     const typeTag = TAGS.type.list.find((t) => t.value === type);
-    return typeTag && 'label' in typeTag ? typeTag.label : type;
+    return typeTag?.label ?? type;
   });
 
-  const languagesList = resource.language.map((lang) => {
+  const languagesList = (resource.language || []).map((lang) => {
     const language = TAGS.language.list.find((l) => l.value === lang);
-    return language && 'nativeName' in language ? language.nativeName : lang;
+    return language?.nativeName ?? lang;
   });
 
   return (

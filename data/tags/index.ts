@@ -1,21 +1,16 @@
-import TYPES, { IType } from './type';
-import PRICES, { IPrice } from './price';
-import LANGUAGES, { ILanguage } from './language';
+import { ILanguage, IPrice, IType } from './types';
+import { LANGUAGES } from './language';
+import { PRICES } from './price';
+import { TYPES } from './type';
 
-type TagList = IPrice[] | ILanguage[] | IType[];
-
-export type TagValues = 'language' | 'type' | 'price';
-
-export type Tag = {
+export interface Tag {
   label: string;
-  value: TagValues;
+  value: 'language' | 'type' | 'price';
   description: string;
-  list: TagList;
+  list: ILanguage[] | IPrice[] | IType[];
 }
 
-export type Tags = Record<Tag['value'], Tag>;
-
-const TAGS: Tags = {
+const TAGS = {
   language: {
     label: 'Language',
     value: 'language',
@@ -36,4 +31,5 @@ const TAGS: Tags = {
   },
 };
 
-export default TAGS;
+export { TAGS };
+export * from './types';

@@ -1,14 +1,4 @@
-import ITag from './types';
-
-export type TypeValues = 
-  | 'course'
-  | 'path';
-
-export interface IType extends ITag {
-  value: TypeValues;
-}
-
-const TYPES: IType[] = [
+const TYPES = [
   {
     value: 'course',
     label: 'Course',
@@ -21,4 +11,4 @@ const TYPES: IType[] = [
   }
  ] as const;
 
-export default TYPES;
+export { TYPES };

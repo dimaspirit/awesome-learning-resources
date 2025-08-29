@@ -1,15 +1,4 @@
-import ITag from './types';
-
-export type PriceValue = 
-  | 'free'
-  | 'freemium'
-  | 'paid';
-
-export interface IPrice extends ITag {
-  value: PriceValue;
-}
-
-const PRICES: IPrice[] = [
+const PRICES = [
   {
     value: 'free',
     label: 'Free',
@@ -25,7 +14,7 @@ const PRICES: IPrice[] = [
     label: 'Paid',
     description: 'Requires payment to access content or features'
   },
-]
+] as const
 
 
-export default PRICES;
+export { PRICES };
