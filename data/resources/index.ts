@@ -44,6 +44,13 @@ const RESOURCES:IResource[] = [
     "language": ["en"],
     "types": ["course", "path"],
     "price": "freemium",
+  },
+  {
+    "link": "https://www.khanacademy.org/",
+    "title": "Khan Academy",
+    "language": ["az","id","cs","da","de","en","es","fr","it","lv","lt","hu","no","nl","uz","pl","pt","ro","sv","vi","tr","el","bg","ky","kk","mn","ru","sr","uk","ka","ur","ar","mr","hi","as","bn","pa","km","ko","zh","ja"],
+    "types": ["course"],
+    "price": "free",
   }
 ]
 
