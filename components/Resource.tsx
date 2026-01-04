@@ -6,7 +6,6 @@ import { IResource } from "@/data/resources";
 import { Card, Heading, Button, Stack, Box, Flex, Badge } from "@chakra-ui/react";
 
 const Resource = ({ resource }: { resource: IResource }) => {
-  // Ensure consistent rendering by using default values
   const price = TAGS.price.list.find((p) => p.value === resource.price)?.label ?? resource.price ?? '';
   const typesList = (resource.types || []).map((type) => {
     const typeTag = TAGS.type.list.find((t) => t.value === type);

@@ -1,6 +1,6 @@
 'use client'
 
-import { Container, Flex, Stack } from "@chakra-ui/react";
+import { Container, Flex, Stack, SimpleGrid } from "@chakra-ui/react";
 
 import RESOURCES from "@/data/resources";
 
@@ -12,12 +12,12 @@ export default function Home() {
     <Flex direction="column" minHeight="100vh">
       <Header />
 
-      <Container maxW={'2xl'} padding={10} as="main">
-        <Stack direction={'column'} gap="4">
+      <Container padding={8} maxW={'8xl'} as="main">
+        <SimpleGrid minChildWidth="sm" gap={{ base: 4, xl: 8 }}>
           {RESOURCES.map((resource) => (
             <Resource key={resource.link} resource={resource} />
           ))}
-        </Stack>
+        </SimpleGrid>
       </Container>
     </Flex>
   );

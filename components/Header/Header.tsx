@@ -5,7 +5,7 @@ import { Container, Flex, Link, Heading, Button } from "@chakra-ui/react";
 
 export function Header() {
   return (
-    <Container padding={4} as="header">
+    <Container padding={8} as="header">
       <Flex direction={'column'} alignItems={'center'}>
         <Heading as="h1" size="4xl" textAlign={'center'}>Awesome learning resources</Heading>
 
