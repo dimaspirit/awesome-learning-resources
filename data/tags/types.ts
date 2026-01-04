@@ -3,7 +3,55 @@ export interface IBaseTag {
   description: string;
 }
 
-export type LanguageValue = 'en' | 'uk' | 'fi' | 'es' | 'it' | 'pt' | 'de' | 'fr' | 'sw' | 'zh';
+export type LanguageValue =
+  | 'ar'
+  | 'hy'
+  | 'as'
+  | 'az'
+  | 'bn'
+  | 'bg'
+  | 'my'
+  | 'zh'
+  | 'cs'
+  | 'da'
+  | 'nl'
+  | 'en'
+  | 'fi'
+  | 'fr'
+  | 'de'
+  | 'el'
+  | 'hi'
+  | 'mr'
+  | 'hu'
+  | 'id'
+  | 'it'
+  | 'ja'
+  | 'kn'
+  | 'km'
+  | 'ko'
+  | 'kk'
+  | 'ky'
+  | 'lv'
+  | 'lt'
+  | 'mn'
+  | 'no'
+  | 'or'
+  | 'pl'
+  | 'pt'
+  | 'pa'
+  | 'ro'
+  | 'ru'
+  | 'sr'
+  | 'es'
+  | 'sw'
+  | 'sv'
+  | 'tr'
+  | 'uk'
+  | 'uz'
+  | 'ur'
+  | 'vi'
+  | 'ka';
+
 export interface ILanguage extends Omit<IBaseTag, 'description'> {
   value: LanguageValue;
   nativeName: string;
