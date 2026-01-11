@@ -13,14 +13,14 @@ const RESOURCES:IResource[] = [
   {
     "link": "https://www.freecodecamp.org/learn/",
     "title": "freeCodeCamp",
-    "language": ["en", "es", "it", "pt", "uk", "de", "sw", "zh"],
+    "language": ["en", "zh", "es", "pt", "de", "it", "sw", "uk"],
     "types": ["course"],
     "price": "free",
   },
   {
     "link": "https://fullstackopen.com/",
     "title": "FullStackOpen",
-    "language": ["en", "fi", "zh", "es", "fr", "pt"],
+    "language": ["en", "zh", "es", "fr", "pt", "fi"],
     "types": ["path"],
     "price": "free",
   },
@@ -48,7 +48,7 @@ const RESOURCES:IResource[] = [
   {
     "link": "https://www.khanacademy.org/",
     "title": "Khan Academy",
-    "language": ["az","id","cs","da","de","en","es","fr","it","lv","lt","hu","no","nl","uz","pl","pt","ro","sv","vi","tr","el","bg","ky","kk","mn","ru","sr","uk","ka","ur","ar","mr","hi","as","bn","pa","km","ko","zh","ja"],
+    "language": ["en","zh","hi","es","fr","ar","bn","pt","ru","ur","id","ja","pa","mr","ko","vi","tr","de","it","pl","ro","nl","uk","el","hu","cs","sv","bg","no","sr","lt","lv","km","as","kk","uz","mn","ky","ka","az"],
     "types": ["course"],
     "price": "free",
   }
