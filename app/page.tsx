@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
 
       <Container padding={8} maxW={'8xl'} as="main">
-        <SimpleGrid minChildWidth="sm" gap={{ base: 4, xl: 8 }}>
+        <SimpleGrid minChildWidth={'320px'} gap={{ base: 4, xl: 6 }}>
           {RESOURCES.map((resource) => (
             <Resource key={resource.link} resource={resource} />
           ))}
