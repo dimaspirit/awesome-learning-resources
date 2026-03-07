@@ -1,6 +1,7 @@
 import { LanguageValue, PriceValue, TypeValue } from "../tags/types";
 
 export interface IResource {
+  logo?: string;
   link: string;
   title: string;
   price: PriceValue;
@@ -11,6 +12,7 @@ export interface IResource {
 
 const RESOURCES:IResource[] = [
   {
+    "logo": "fcc.svg",
     "link": "https://www.freecodecamp.org/learn/",
     "title": "freeCodeCamp",
     "language": ["en", "zh", "es", "pt", "de", "it", "sw", "uk"],
@@ -25,6 +27,7 @@ const RESOURCES:IResource[] = [
     "price": "free",
   },
   {
+    "logo": "prometeus.png",
     "link": "https://prometheus.org.ua/courses-catalog?price=0",
     "title": "Prometheus",
     "language": ["uk"],

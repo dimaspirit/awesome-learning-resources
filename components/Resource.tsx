@@ -23,10 +23,10 @@ const Resource = ({ resource }: { resource: IResource }) => {
 
   return (
     <Card.Root key={resource.link}>
-      {/* <Image src="/resources/fcc_primary_large.svg" px={8} pt={4} alt="Resource Icon" /> */}
+      {resource.logo && <Image src={`/resources/${resource.logo}`} px={6} pt={4} alt={`${resource.title} logo`} />}
 
       <Card.Body gap="2">
-        <Card.Title fontSize={'2xl'}>{resource.title}</Card.Title>
+        {!resource.logo && <Card.Title fontSize="2xl">{resource.title}</Card.Title> }
 
         <Box>
           <Heading as="span" size="xs" fontWeight={'normal'} color={"fg.muted"} textTransform={'uppercase'} marginBottom={'1'}>
