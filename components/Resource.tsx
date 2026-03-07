@@ -2,10 +2,12 @@
 
 import { TAGS } from "@/data/tags";
 import { IResource } from "@/data/resources";
-
 import { Card, Heading, Button, Box, Flex, Badge, Popover, Portal, Image } from "@chakra-ui/react";
 
+const pagesBasePath = process.env.NEXT_PUBLIC_PAGES_BASE_PATH;
+
 const Resource = ({ resource }: { resource: IResource }) => {
+
   const price = TAGS.price.list.find((p) => p.value === resource.price)?.label ?? resource.price ?? '';
 
   const typesList = (resource.types || []).map((type) => {
@@ -23,7 +25,7 @@ const Resource = ({ resource }: { resource: IResource }) => {
 
   return (
     <Card.Root key={resource.link}>
-      {resource.logo && <Image src={`/resources/${resource.logo}`} px={6} pt={4} alt={`${resource.title} logo`} />}
+      {resource.logo && <Image src={`${pagesBasePath}/resources/${resource.logo}`} px={6} pt={4} alt={`${resource.title} logo`} />}
 
       <Card.Body gap="2">
         {!resource.logo && <Card.Title fontSize="2xl">{resource.title}</Card.Title> }
