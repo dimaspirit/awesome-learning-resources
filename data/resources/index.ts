@@ -54,6 +54,13 @@ const RESOURCES:IResource[] = [
     "language": ["en","zh","hi","es","fr","ar","bn","pt","ru","ur","id","ja","pa","mr","ko","vi","tr","de","it","pl","ro","nl","uk","el","hu","cs","sv","bg","no","sr","lt","lv","km","as","kk","uz","mn","ky","ka","az"],
     "types": ["course"],
     "price": "free",
+  },
+  {
+    "link": "https://coddy.tech/",
+    "title": "Coddy.tech",
+    "language": ["en", "es", "pt", "tr", "fr", "de", "ru", "ja", "ko", "ar"],
+    "types": ["course"],
+    "price": "freemium",
   }
 ]
 

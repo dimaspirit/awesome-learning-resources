@@ -22,7 +22,6 @@ const Resource = ({ resource }: { resource: IResource }) => {
   const isLanguagesOverflow = languagesList.length > 4;
   const displayedLanguages = isLanguagesOverflow ? languagesList.slice(0, 4) : languagesList;
 
-
   return (
     <Card.Root key={resource.link}>
       {resource.logo && <Image src={`${pagesBasePath}/resources/${resource.logo}`} px={6} pt={4} alt={`${resource.title} logo`} />}
