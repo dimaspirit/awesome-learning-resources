@@ -56,6 +56,7 @@ const RESOURCES:IResource[] = [
     "price": "free",
   },
   {
+    "logo": "coddy-tech.svg",
     "link": "https://coddy.tech/",
     "title": "Coddy.tech",
     "language": ["en", "es", "pt", "tr", "fr", "de", "ru", "ja", "ko", "ar"],
