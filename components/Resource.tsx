@@ -24,7 +24,7 @@ const Resource = ({ resource }: { resource: IResource }) => {
 
   return (
     <Card.Root key={resource.link}>
-      {resource.logo && <Image src={`${pagesBasePath}/resources/${resource.logo}`} px={6} pt={4} alt={`${resource.title} logo`} />}
+      {resource.logo && <Image src={`${pagesBasePath}/resources/${resource.logo}`} px={6} pt={4} objectFit={'contain'} alt={`${resource.title} logo`} />}
 
       <Card.Body gap="2">
         {!resource.logo && <Card.Title fontSize="2xl">{resource.title}</Card.Title> }
@@ -86,7 +86,7 @@ const Resource = ({ resource }: { resource: IResource }) => {
       </Card.Body>
 
       <Card.Footer>
-        <Button asChild>
+        <Button variant="subtle" size={{ base: "md", md: "lg" }} asChild>
           <a
             href={resource.link}
             target="_blank"
