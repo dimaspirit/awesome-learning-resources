@@ -62,6 +62,14 @@ const RESOURCES:IResource[] = [
     "language": ["en", "es", "pt", "tr", "fr", "de", "ru", "ja", "ko", "ar"],
     "types": ["course"],
     "price": "freemium",
+  },
+  {
+    "logo": "kaggle.svg",
+    "link": "https://www.kaggle.com/learn",
+    "title": "kaggle",
+    "language": ["en"],
+    "types": ["course"],
+    "price": "free",
   }
 ]
 

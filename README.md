@@ -34,3 +34,8 @@
 
 ![price](https://img.shields.io/badge/price-Freemium-green) ![type](http://img.shields.io/badge/type-Course-blue) ![languages](https://img.shields.io/badge/languages-Arabic%2C%20English%2C%20French%2C%20German%2C%20Japanese%2C%20Korean%2C%20Portuguese%2C%20Russian%2C%20Spanish%2C%20Turkish-yellow)
 
+
+### [kaggle](https://www.kaggle.com/learn)
+
+![price](https://img.shields.io/badge/price-Free-green) ![type](http://img.shields.io/badge/type-Course-blue) ![languages](https://img.shields.io/badge/languages-English-yellow)
+
